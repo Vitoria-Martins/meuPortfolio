@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Portfolío Vitória Developer</title>
+    <link
+      rel="icon"
+      href="/imagem/v.png" />
+    <link
+      rel="stylesheet"
+      href="style.css" />
+
+    <style>
+      .corpo {
+        margin: 40px 0;
+        font-family: "Releway";
+        font-size: 14px;
+        font-weight: 500;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .title {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #5d4037;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+      }
+      img {
+        height: 200px;
+        width: 200px;
+      }
+      imgR {
+        width: 200px;
+        height: 500px;
+      }
+
+      card {
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Dev Vitoria</h1>
+      <nav class="nav">
+        <ul class="horizontal-list">
+          <li>
+            <a
+              href="/index..html"
+              class="nav-item"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/sobre.html"
+              class="nav-item"
+              >Sobre
+            </a>
+          </li>
+          <li>
+            <a
+              href="/habilidades.html"
+              class="nav-item"
+              >Habilidades</a
+            >
+          </li>
+          <li>
+            <a
+              href="/projetos.html"
+              class="nav-item"
+              >Projetos</a
+            >
+          </li>
+          <li>
+            <a
+              href="/contato.html"
+              class="nav-item"
+              >Contato</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+
+    <h1 class="title">Habilidades</h1>
+
+    <div class="corpo">
+      <div
+        id="app"
+        class="container">
+        <card>
+          <img
+            src="/imagem/html.png"
+            alt="" />
+
+          <h1>Html</h1>
+          <p>
+            A linguagem de marcação que dá vida à estrutura das páginas da web.
+          </p>
+        </card>
+        <card>
+          <img
+            src="/imagem/css.png"
+            alt="" />
+
+          <h1>CSS</h1>
+          <p>
+            A linguagem de estilização que torna as páginas bonitas e atraentes.
+          </p>
+        </card>
+
+        <card>
+          <img
+            src="/imagem/javascript.png"
+            alt="" />
+
+          <h1>JavaScript</h1>
+          <p>
+            A linguagem de programação que torna as páginas interativas e
+            dinâmicas.
+          </p>
+        </card>
+
+        <card>
+          <img
+            id="imgR"
+            src="/imagem/react.png"
+            alt="" />
+
+          <h1>React</h1>
+          <p>
+            Uma biblioteca JavaScript popular para criação de interfaces de
+            usuário modernas e responsivas.
+          </p>
+        </card>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

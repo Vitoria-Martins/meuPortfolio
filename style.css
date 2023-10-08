@@ -1,0 +1,162 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url(imagem/imagem.png);
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  background-color: #e3e1ff;
+  padding: 40px;
+}
+
+nav {
+  position: absolute;
+  top: 1;
+  right: 0;
+  padding-right: 50px;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.imgV,
+.imgD {
+  height: 60px;
+}
+.nav a {
+  display: block;
+  transition: 0.5s;
+  position: relative;
+  z-index: 10;
+  font-weight: bold;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #160843;
+  border-bottom: 2px solid #160843;
+  top: 0;
+  left: 0;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #160843;
+  z-index: -1;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  color: white;
+  padding: 5px;
+}
+
+.nav a:hover::after {
+  transform: scaleY(1);
+  opacity: 1;
+  color: white;
+}
+
+.nav a:hover::before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+header > h1 {
+  color: #160843;
+}
+
+hr {
+  border: none;
+  background-color: #160843;
+  height: 1px;
+}
+
+#home {
+  display: block;
+}
+
+.btSobreMim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.btSobreMim > button {
+  background-color: #0f062d;
+  color: white;
+  height: 70px;
+  width: 180px;
+  border-radius: 10px;
+}
+
+.img-container {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  position: relative;
+}
+
+.texto {
+  text-align: center;
+  position: relative;
+  transform: translateY(-150%);
+}
+
+.img-container .imgP {
+  -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+}
+
+.imgP {
+  display: block;
+  margin: 0 auto;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+.container {
+  position: absolute;
+  margin: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 2%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul.horizontal-list {
+  display: flex;
+  list-style-type: none;
+}
+
+ul.horizontal-list li {
+  display: inline;
+  margin-left: 20px;
+  font-size: 18px;
+}
