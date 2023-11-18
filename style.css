@@ -5,14 +5,26 @@
 
 body {
   font-family: sans-serif;
-  background-image: url(imagem/imagem.png);
   width: 100%;
   height: 100vh;
 }
 
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.3)),
+    url(imagem/fundo.jpeg) no-repeat;
+  body {
+    overflow: hidden; /* Evita barras de rolagem, pode cortar partes da imagem */
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
 header {
-  background-color: #e3e1ff;
-  padding: 40px;
+  background-color: #060214;
+  padding: 30px;
 }
 
 nav {
@@ -41,8 +53,8 @@ a::after {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-top: 2px solid #160843;
-  border-bottom: 2px solid #160843;
+  border-top: 2px solid #060214;
+
   top: 0;
   left: 0;
   transform: scaleY(2);
@@ -57,7 +69,7 @@ a::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #160843;
+  background-color: #060214;
   z-index: -1;
   transform: scale(0);
   opacity: 0;
@@ -80,31 +92,12 @@ a::before {
   opacity: 1;
 }
 header > h1 {
-  color: #160843;
-}
-
-hr {
-  border: none;
-  background-color: #160843;
-  height: 1px;
+  color: white;
+  font-size: 21px;
 }
 
 #home {
   display: block;
-}
-
-.btSobreMim {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.btSobreMim > button {
-  background-color: #0f062d;
-  color: white;
-  height: 70px;
-  width: 180px;
-  border-radius: 10px;
 }
 
 .img-container {
@@ -127,7 +120,7 @@ hr {
 }
 
 .img-container .imgP {
-  -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+  -webkit-mask-image: linear-gradient(180deg, 60%, transparent);
 }
 
 .imgP {
@@ -147,7 +140,7 @@ hr {
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 ul.horizontal-list {
@@ -159,4 +152,32 @@ ul.horizontal-list li {
   display: inline;
   margin-left: 20px;
   font-size: 18px;
+}
+.textoHome {
+  color: white;
+}
+.textoHome > h2 {
+  color: rgb(110, 34, 57);
+  font-size: 28px;
+}
+
+.stacks-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 6rem;
+}
+
+.stacks-content h3 {
+  color: white;
+  font: 1.15rem;
+}
+
+li {
+  list-style-type: none;
+}
+.icon {
+  width: 100px;
+  height: 100px;
 }

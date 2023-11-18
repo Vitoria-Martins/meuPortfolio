@@ -14,43 +14,85 @@
       href="style.css" />
 
     <style>
+
+     
       .corpo {
         margin: 40px 0;
         font-family: "Releway";
         font-size: 14px;
-        font-weight: 500;
-        -webkit-font-smoothing: antialiased;
+
+       
+    
       }
 
       .title {
         margin-top: 20px;
         font-size: 24px;
         font-weight: 700;
-        color: #5d4037;
+        color: #160843;
         text-align: center;
       }
 
       .container {
+        border: black;
         display: flex;
         align-items: center;
-      }
-      img {
-        height: 200px;
-        width: 200px;
-      }
-      imgR {
-        width: 200px;
-        height: 500px;
+        position: relative;
+        flex-direction: row;
       }
 
-      card {
+      .container > h1{
+       
       }
+
+      div > h1 {
+        margin: 30px;
+        margin-left: 50px;
+        color: yellowgreen;
+      }
+      img {
+        
+        width: 80px;
+       height: 80px;
+       
+      
+      }
+
+      img:hover {
+        opacity: 0.5;
+      }
+      .imagem {
+        
+        
+      }
+
+      .textMouse  {
+        
+        opacity: 0;
+        font-size: 20px;
+        z-index: 1;
+        position: absolute;
+        max-width: 100px;
+        
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        color: white;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .textMouse >h1{
+        font-size: 16px;
+      }
+
+
     </style>
   </head>
   <body>
     <header>
+      
       <h1>Dev Vitoria</h1>
       <nav class="nav">
+      
         <ul class="horizontal-list">
           <li>
             <a
@@ -95,54 +137,53 @@
     <h1 class="title">Habilidades</h1>
 
     <div class="corpo">
-      <div
-        id="app"
-        class="container">
-        <card>
+    
+        <div class="container">
+          <h1>Html</h1>
           <img
+            class="imagem"
             src="/imagem/html.png"
             alt="" />
-
-          <h1>Html</h1>
-          <p>
-            A linguagem de marcação que dá vida à estrutura das páginas da web.
-          </p>
-        </card>
-        <card>
+          <span class="textMouse">
+            <h1>A linguagem de marcação que dá vida à estrutura das páginas da web.</h1>
+          </span>
+        </div>
+        <div class="container">
+          <h1>CSS</h1>
           <img
+            class="imagem"
             src="/imagem/css.png"
             alt="" />
+          <span class="textMouse">
+            <h1> A linguagem de estilização que torna as páginas bonitas e atraentes.</h1>
+          </span>
+        </div>
 
-          <h1>CSS</h1>
-          <p>
-            A linguagem de estilização que torna as páginas bonitas e atraentes.
-          </p>
-        </card>
-
-        <card>
+        <div class="container">
+          <h1>JavaScript</h1>
           <img
+            class="imagem"
             src="/imagem/javascript.png"
             alt="" />
 
-          <h1>JavaScript</h1>
-          <p>
-            A linguagem de programação que torna as páginas interativas e
-            dinâmicas.
-          </p>
-        </card>
+          <span class="textMouse">
+            <h1> A linguagem de programação que torna as páginas interativas e
+            dinâmicas.</h1>
+          </span>
+        </div>
 
-        <card>
+        <div class="container">
+          <h1>React</h1>
           <img
-            id="imgR"
+            class="imagem"
             src="/imagem/react.png"
             alt="" />
 
-          <h1>React</h1>
-          <p>
-            Uma biblioteca JavaScript popular para criação de interfaces de
-            usuário modernas e responsivas.
-          </p>
-        </card>
+          <span class="textMouse">
+            <h1> Uma biblioteca JavaScript popular para criação de interfaces de
+            usuário modernas e responsivas.</h1>
+          </span>
+        </div>
       </div>
     </div>
 
