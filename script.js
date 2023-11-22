@@ -1,3 +1,5 @@
+/* codigo mov de navegacao */
+
 function abrirSobre() {
   window.location.href = "sobre.html";
 }
@@ -15,3 +17,20 @@ imagens.forEach((imagem, index) => {
     texto.style.opacity = "0"; // texto invisível
   });
 });
+
+/*the end */
+
+/* navecao entre as paginas */
+
+async function includeHTML() {
+  try {
+    const response = await fetch("header.html");
+    const html = await response.text();
+    document.getElementById("header-container").innerHTML = html;
+  } catch (error) {
+    console.error("Erro ao carregar o conteúdo do header:", error);
+  }
+}
+
+includeHTML();
+/*the end  */

@@ -13,93 +13,113 @@
       rel="stylesheet"
       href="style.css" />
   </head>
-  <div class="background">
   <body>
-    <header>
-      <h1>Dev Vitoria</h1>
-      <nav class="nav">
-        <ul class="horizontal-list">
-          <li>
-            <a
-              href="/index..html"
-              class="nav-item"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="/sobre.html"
-              class="nav-item"
-              >Sobre
-            </a>
-          </li>
-          <li>
-           
-            <a
-              href="/projetos.html"
-              class="nav-item"
-              >Projetos</a
-            >
-          </li>
-          <li>
-            <a
-              href="/contato.html"
-              class="nav-item"
-              >Contato</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    
+    <!-- header -->
+
+    <div
+      id="header-container"
+      class="header-container">
+      <!-- O conteúdo do header será carregado aqui -->
+    </div>
 
     <div id="home">
-      <div class="img-container">
-        <img
-          class="imgP"
-          src="imagem/fotoperfil.jpg"
-          alt="imagem perfil" />
+      <!-- Restante do conteúdo da página -->
+    </div>
 
+    <script src="script.js"></script>
+
+    <include-html src="header.html"> </include-html>
+
+    <!-- header end -->
+
+    <!-- container left -->
+
+    <section id="container">
+      <div class="container-content">
         <div class="textoHome">
-          <h1 class="texto">Olá! Meu nome é </h1>
-          <h2 class="texto">Vitória Martins</h2>
+          <h1>Olá! <span></span></h1>
+          <h1>Meu nome é<span></span></h1>
+          <h1 class="h1c">Vitória Martins<span></span></h1>
+        </div>
+
+        <!--  
+
+      <div class="stacks-content">
+        <h3>Techs:</h3>
+
+        <div class="stacks">
+          <ul>
+            <li>
+              <img
+                class="icon"
+                src="imagem/html.png"
+                alt="html-icon" />
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <img
+                class="icon"
+                src="imagem/css.png"
+                alt="css-icon" />
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <img
+                class="icon"
+                src="imagem/javascript.png"
+                alt="js-icon" />
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <img
+                class="icon"
+                src="imagem/react.png"
+                alt="react-icon" />
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="stacks-content">
-      <h3>Techs: </h3>
+    -->
 
-      <div class="stacks">
+        <!-- left end -->
 
-        <ul>
-          <li>
-            <img class="icon" src="imagem/html.png" alt="html-icon">
-          </li>
-        </ul>
+        <!-- container rigth 
 
-        <ul>
-          <li>
-            <img class="icon"  src="imagem/css.png" alt="css-icon">
-          </li>
-        </ul>
+    <div id="container-rigth">
+      <div class="img-container">
+        <img
+          class="imgP"
+          src="imagem/myphoto.jpeg"
+          alt="imagem perfil" />
+      </div>
 
-        <ul>
-          <li>
-            <img class="icon"  src="imagem/javascript.png" alt="js-icon">
-          </li>
-        </ul>
+      <ul>
+      <li><a href="https://www.linkedin.com/in/vitoria-martins-958565155/"></a></li>
 
-        <ul>
-          <li>
-            <img class="icon"  src="imagem/react.png" alt="react-icon">
-          </li>
-        </ul>
+     </ul>
+
+     <ul>
+      <li><a href="https://github.com/Vitoria-Martins"></a></li>
 
 
-   
+     </ul>
 
-    <script src="script.js"></script>
+     <ul>
+      <li><a href="https://www.instagram.com/vihmarttins_/"></a></li>
+     </ul>
+    
+    </div>
+
+     rigth end -->
+      </div>
+    </section>
   </body>
-</div>
 </html>
