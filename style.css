@@ -21,41 +21,68 @@ body {
   background-attachment: fixed;
 }
 
-.img-container {
-  padding: 290px 0;
-  left: 25%;
+li {
+  list-style-type: none;
+}
+
+/* imagem da home */
+
+#container-rigth {
+  height: 100vh;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
   flex-direction: column;
-  margin: auto;
-  width: 70%;
-  text-align: center;
-  position: relative;
+  padding-top: 100px;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.3)),
+    url(imagem/fundo.jpeg) no-repeat;
+  overflow-x: hidden;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.imgP {
-  display: block;
-  margin: 0 auto;
+#container-rigth::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+
+  height: 100%;
+  width: 100%;
+}
+
+.img-container .imgP {
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  position: fixed;
   border: #46052b solid 5px;
-  top: 30%;
+  top: 25%;
+  left: 60%;
+  background-position: top centro;
+}
+
+/* links */
+
+.links {
+  position: sticky;
+  text-align: center;
+  top: 65%;
+  padding-top: 20px;
+}
+.links img {
+  height: 30px;
+  width: 20px;
   align-items: center;
-  justify-content: center;
+  padding-left: 8px;
+}
+
+.lorem {
+  font-size: 50px;
 }
 
 /* MENU */
-.container {
-  position: absolute;
-  margin: 2%;
-  margin-left: 20%;
-  margin-right: 20%;
-  padding: 2%;
-}
 
 a {
   text-decoration: none;
@@ -72,15 +99,28 @@ ul.horizontal-list li {
   margin-left: 20px;
   font-size: 18px;
 }
+
+/* container principal */
+
+#container {
+  background-color: black;
+  display: flex;
+
+  width: 100%;
+}
+
+.container-content {
+  height: 100%;
+  width: 50%;
+  justify-content: center;
+}
+
 /* TITULO PRINCIPAL */
 .textoHome {
-  color: white;
-  position: fixed;
-  top: 25%;
-  padding: 8%;
-  font-size: 23px;
-  letter-spacing: -1px; /* ou outro valor negativo conforme necessário */
-  word-spacing: -2px;
+  margin-top: 11rem;
+  padding-left: 25%;
+  padding-top: 150px;
+  padding-bottom: 50px;
 }
 
 .container-content div h1 {
@@ -88,14 +128,12 @@ ul.horizontal-list li {
   color: transparent;
   position: relative;
   width: fit-content;
-
-  font-size: 4.5rem;
+  font-size: 4rem;
   line-height: 6rem;
   animation: written_text 0.5s ease forwards;
 }
 .textoHome > h1:nth-child(1) {
   animation-delay: 1s;
-  animation-name: written_text;
 }
 
 .textoHome > h1:nth-child(2) {
@@ -104,8 +142,8 @@ ul.horizontal-list li {
 }
 
 .textoHome > h1:nth-child(3) {
-  animation-delay: 3s;
   animation: written_text_name 0.5s ease forwards;
+  animation-delay: 3s;
 }
 
 .container-content div h1 span {
@@ -118,6 +156,7 @@ ul.horizontal-list li {
   background-color: #46052ba7;
   animation-delay: 0.5;
   animation: written_text_box 1s ease;
+  animation-delay: 0.5s;
 }
 
 .container-content div h1:nth-child(1) span {
@@ -131,6 +170,7 @@ ul.horizontal-list li {
 .container-content div h1:nth-child(3) span {
   animation-delay: 2.5s;
 }
+
 @keyframes written_text {
   100% {
     color: white;
@@ -139,7 +179,7 @@ ul.horizontal-list li {
 
 @keyframes written_text_name {
   100% {
-    color: #46052b;
+    color: #8d0b57;
   }
 }
 
@@ -155,7 +195,7 @@ ul.horizontal-list li {
 }
 
 .textoHome > .h1c {
-  color: white;
+  color: whi;
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
 }
@@ -163,39 +203,52 @@ ul.horizontal-list li {
 /*  container habilidades */
 .stacks-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin-top: 6rem;
+  padding-left: 25%;
 }
 
 .stacks-content h3 {
   color: white;
-  font: 1.15rem;
+  font-size: 1.15rem;
+  margin-left: 20px;
+  padding-bottom: 10px;
 }
 
-li {
-  list-style-type: none;
-}
-.icon {
-  width: 100px;
-  height: 100px;
-}
-
-/* end */
-
-#container {
-  width: 100%;
-  height: 100vh;
-
+.stacks {
   display: flex;
   align-items: center;
+  flex-direction: row;
+  z-index: 1;
 }
 
-.container-content {
-  height: 100%;
-  width: 50%;
+.stacks ul li {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  right: 20rem;
+  list-style: none;
+  padding-right: 25px;
 }
+
+.stacks img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.stacks ul li img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.stacks ul li div:hover::after {
+  content: attr(data);
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+/*  */
